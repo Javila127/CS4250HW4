@@ -1,3 +1,15 @@
+#-------------------------------------------------------------------------
+# AUTHOR: James Avila
+# FILENAME: crawler.py
+# SPECIFICATION: This file crawls a seed url and continues
+# searching urls until the target url is found. All pages crawled
+# are stored in a mongodb collection called "pages". For this 
+# assignment the target url is determined found when the heading 
+# "Permanent Faculty" is found.
+# FOR: CS 4250- Assignment #4
+# TIME SPENT: 3.5 hours
+#-----------------------------------------------------------*/
+
 import urllib.request
 from bs4 import BeautifulSoup
 from pymongo import MongoClient

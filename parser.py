@@ -1,3 +1,14 @@
+#-------------------------------------------------------------------------
+# AUTHOR: James Avila
+# FILENAME: parser.py
+# SPECIFICATION: This file parsers the html content of the target url,
+# specifically: professor name, title, officem phone number, email,
+# and website. This information is then stored in a mongodb collection
+# called "professors"
+# FOR: CS 4250- Assignment #4
+# TIME SPENT: 1.5 hours
+#-----------------------------------------------------------*/
+
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
