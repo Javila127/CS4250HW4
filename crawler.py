@@ -60,7 +60,7 @@ def parse_links(html_content, base_url):
     return links
 
 # Main crawler function following pseudocode
-def crawler_thread(frontier, target_url, collection):
+def crawler_thread(frontier, collection):
     while not frontier.done():
         url = frontier.next_url()
         html_content = retrieve_html(url)
@@ -96,7 +96,6 @@ class Frontier:
 
 def main():
     base_url = "https://www.cpp.edu/sci/computer-science/"
-    target_url = "https://www.cpp.edu/sci/computer-science/faculty-and-staff/permanent-faculty.shtml"
     # Initializing the frontier
     frontier = Frontier(base_url)
 
@@ -106,7 +105,7 @@ def main():
         return
 
     # Crawl the frontier until target page is found
-    crawler_thread(frontier, target_url, db["pages"])
+    crawler_thread(frontier, db["pages"])
 
 
 if __name__ == "__main__":
